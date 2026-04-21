@@ -1,1 +1,5 @@
 @import url('bootstrap');
+
+main {
+    height: 100vh;
+}
