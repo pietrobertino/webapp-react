@@ -19,17 +19,32 @@ export default function MoviePage() {
 
     return (
         <>
-            <div className="container">
-                <h1>{movieInfo.title}</h1>
-                <section>
-                    <img src={import.meta.env.VITE_SERVER_API_URL + '/imgs/' + movieInfo.image} alt={movieInfo.title} />
+            <section className="text-center bg-primary-subtle p-3">
+                <div className="container">
+                    <h1 className="text-center">{movieInfo.title}</h1>
+                    <img src={import.meta.env.VITE_SERVER_API_URL + '/imgs/' + movieInfo.image} alt={movieInfo.title} className="w-25 text-center" />
+                    <div className="mt-3">
+                        <div><span className=" fw-bold">Genre:</span> {movieInfo.genre}</div>
+                        <div><span className=" fw-bold">Release Year:</span> {movieInfo.release_year}</div>
+                        <div><span className=" fw-bold">Director:</span> {movieInfo.director}</div>
+                        <div><span className=" fw-bold">Plot:</span> {movieInfo.abstract}</div>
+                    </div>
+                </div>
+            </section>
 
-                </section>
-            </div>
-
             <div className="container">
-                <section>
+                <section className="mt-5">
                     <h2>Reviews</h2>
+                    <ul className=" list-group">
+                        {movieInfo.reviews.map(review => (
+                            <li className=" list-group-item">
+                                <div className="d-flex justify-content-between">
+                                    <div>{review.name}:</div>
+                                    <div>{review.vote}/5</div>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
                 </section>
             </div>
 
