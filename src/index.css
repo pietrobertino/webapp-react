@@ -1,5 +1,18 @@
 @import url('bootstrap');
 
+body {
+    font-family: 'Quicksand Variable', sans-serif;
+}
+
 main {
     min-height: 100vh;
+}
+
+
+.card-img {
+
+    width: 50%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+
 }

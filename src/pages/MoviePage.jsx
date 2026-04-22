@@ -36,11 +36,14 @@ export default function MoviePage() {
                 <section className="mt-5">
                     <h2>Reviews</h2>
                     <ul className=" list-group">
-                        {movieInfo.reviews.map(review => (
+                        {movieInfo?.reviews?.map(review => (
                             <li className=" list-group-item">
                                 <div className="d-flex justify-content-between">
                                     <div>{review.name}:</div>
                                     <div>{review.vote}/5</div>
+                                </div>
+                                <div>
+                                    {review.text}
                                 </div>
                             </li>
                         ))}
