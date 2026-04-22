@@ -44,6 +44,10 @@ main {
 
 }
 
+.active {
+    color: var(--action-color);
+}
+
 .details-btn {
     background-color: var(--action-color);
     color: var(--primary-color);
