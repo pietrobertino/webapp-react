@@ -1,13 +1,48 @@
 @import url('bootstrap');
 
+:root {
+    --bg-color: #020617;
+    --surface-color: #1E293B;
+    --secondary-color: #94A3B8;
+    --primary-color: #F8FAFC;
+    --action-color: #F59E0B;
+}
+
 body {
     font-family: 'Quicksand Variable', sans-serif;
 }
 
-main {
-    min-height: 100vh;
+nav {
+    background-color: var(--surface-color);
+    color: var(--primary-color);
+
+    #nav-item {
+        color: var(--primary-color);
+    }
 }
 
+main {
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+
+
+.card {
+    background-color: var(--surface-color);
+
+    .card-title {
+        color: var(--primary-color);
+    }
+
+    .card-body {
+        color: var(--secondary-color);
+    }
+
+    .btn {
+        background-color: var(--action-color);
+        color: var(--primary-color);
+    }
+}
 
 .card-img {
 
@@ -15,4 +50,8 @@ main {
     aspect-ratio: 9 / 16;
     object-fit: cover;
 
+}
+
+footer {
+    background-color: var(--surface-color);
 }

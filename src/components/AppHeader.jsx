@@ -3,15 +3,12 @@ import { NavLink } from "react-router-dom";
 export default function AppHeader() {
 
     return (
-        <nav className="navbar navbar-expand navbar-light bg-light">
-            <ul className="nav navbar-nav">
-                <li className="nav-item">
-                    <NavLink className="nav-link active" to="/" aria-current="page">
-                        Home<span className="visually-hidden">(current)</span>
-                    </NavLink>
-                </li>
-
-            </ul>
+        <nav className="navbar d-flex justify-content-between align-items-center ">
+            <div className="container-fluid">
+                <NavLink to="/" className="text-decoration-none" id="nav-item">
+                    Home
+                </NavLink>
+            </div>
         </nav>
 
     )

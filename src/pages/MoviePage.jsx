@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import MovieReviews from "../components/MovieReviews";
 
 export default function MoviePage() {
 
@@ -19,7 +20,7 @@ export default function MoviePage() {
 
     return (
         <>
-            <section className="text-center bg-primary-subtle p-3">
+            <section className="text-center p-3">
                 <div className="container">
                     <h1 className="text-center">{movieInfo.title}</h1>
                     <img src={import.meta.env.VITE_SERVER_API_URL + '/imgs/' + movieInfo.image} alt={movieInfo.title} className="w-25 text-center" />
@@ -35,19 +36,7 @@ export default function MoviePage() {
             <div className="container">
                 <section className="mt-5">
                     <h2>Reviews</h2>
-                    <ul className=" list-group">
-                        {movieInfo?.reviews?.map(review => (
-                            <li className=" list-group-item">
-                                <div className="d-flex justify-content-between">
-                                    <div>{review.name}:</div>
-                                    <div>{review.vote}/5</div>
-                                </div>
-                                <div>
-                                    {review.text}
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
+                    <MovieReviews movieInfo={movieInfo} />
                 </section>
             </div>
 
