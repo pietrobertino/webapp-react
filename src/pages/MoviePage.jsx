@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import MovieReviews from "../components/MovieReviews";
+import MovieScore from "../components/MovieScore";
 
 export default function MoviePage() {
 
@@ -29,6 +30,7 @@ export default function MoviePage() {
                         <div><span className=" fw-bold">Release Year:</span> {movieInfo.release_year}</div>
                         <div><span className=" fw-bold">Director:</span> {movieInfo.director}</div>
                         <div><span className=" fw-bold">Plot:</span> {movieInfo.abstract}</div>
+                        <div><span className=" fw-bold">Score:</span><MovieScore vote={movieInfo?.medium_score} className=' d-inline' /></div>
                     </div>
                 </div>
             </section>

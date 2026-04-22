@@ -2,7 +2,7 @@ import MovieButton from "./MovieButton";
 
 export default function MovieModal({ clickedMovie }) {
     return (
-        <div className="modal fade" id="movieModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
+        <div className="modal fade" id="movieModal" tabIndex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
             <div className="modal-dialog">
                 <div className="modal-content">
                     <div className="modal-header">
