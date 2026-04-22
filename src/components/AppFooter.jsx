@@ -1,8 +1,8 @@
 export default function AppFooter() {
 
     return (
-        <footer>
-            Footer
+        <footer className="text-center py-2">
+            @2024 Movie Reviews App
         </footer>
     )
 }

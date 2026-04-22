@@ -20,11 +20,11 @@ export default function MoviePage() {
 
     return (
         <>
-            <section className="text-center p-3">
+            <section className="text-center py-5" id="movie-description">
                 <div className="container">
-                    <h1 className="text-center">{movieInfo.title}</h1>
+                    <h1 className="text-center pb-3">{movieInfo.title}</h1>
                     <img src={import.meta.env.VITE_SERVER_API_URL + '/imgs/' + movieInfo.image} alt={movieInfo.title} className="w-25 text-center" />
-                    <div className="mt-3">
+                    <div className="mt-3 movie-info">
                         <div><span className=" fw-bold">Genre:</span> {movieInfo.genre}</div>
                         <div><span className=" fw-bold">Release Year:</span> {movieInfo.release_year}</div>
                         <div><span className=" fw-bold">Director:</span> {movieInfo.director}</div>
@@ -33,12 +33,12 @@ export default function MoviePage() {
                 </div>
             </section>
 
-            <div className="container">
-                <section className="mt-5">
-                    <h2>Reviews</h2>
+            <section className="py-5" id="review-section">
+                <div className="container">
+                    <h1 className="pb-3">Reviews</h1>
                     <MovieReviews movieInfo={movieInfo} />
-                </section>
-            </div>
+                </div>
+            </section>
 
         </>
     )

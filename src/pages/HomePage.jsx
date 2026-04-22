@@ -20,7 +20,7 @@ export default function HomePage() {
     return (
         <>
             <div className="container">
-                <h1 className="text-white py-3">Movies</h1>
+                <h1 className=" py-3">Movies</h1>
                 <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
                     {movies.map(movie => (
                         <div className="col" key={movie.id}>

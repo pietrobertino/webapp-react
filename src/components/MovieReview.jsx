@@ -6,7 +6,7 @@ export default function MovieReview({ review }) {
                 <div>{review.name}:</div>
                 <div>{review.vote}/5</div>
             </div>
-            <div>
+            <div className="review-text">
                 {review.text}
             </div>
         </li>
