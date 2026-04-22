@@ -42,19 +42,50 @@ main {
         color: var(--secondary-color);
     }
 
-    .btn {
-        background-color: var(--action-color);
-        color: var(--primary-color);
+}
+
+.details-btn {
+    background-color: var(--action-color);
+    color: var(--primary-color);
+
+    #btn-label {
+        color: var(--bg-color);
     }
 }
 
 .card-img {
 
-    width: 50%;
+    width: 100%;
     aspect-ratio: 9 / 16;
     object-fit: cover;
+    transition: all 0.3s ease;
 
 }
+
+.img-col {
+    position: relative;
+}
+
+.card-img-overlay {
+    display: none;
+    position: absolute;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-col:hover {
+    .card-img {
+        opacity: 0.2;
+    }
+
+    .card-img-overlay {
+        display: flex;
+        cursor: pointer;
+    }
+}
+
 
 #movie-description {
     background-color: var(--bg-color);
@@ -85,6 +116,11 @@ main {
             color: var(--primary-color);
         }
     }
+}
+
+.modal-content {
+    background-color: var(--surface-color);
+    color: var(--primary-color);
 }
 
 footer {
