@@ -127,6 +127,43 @@ main {
     color: var(--primary-color);
 }
 
+.col-form-label {
+    color: var(--primary-color);
+}
+
+form {
+
+    .review-form-input {
+        background-color: var(--surface-color);
+        color: var(--primary-color);
+        border-color: var(--secondary-color);
+    }
+
+    .review-form-input::placeholder {
+        color: var(--secondary-color);
+    }
+
+    .review-form-input:focus {
+        background: var(--bg-color);
+        border-color: var(--action-color);
+        color: var(--primary-color);
+        outline: none;
+        box-shadow: var(--action-color);
+    }
+
+    #submit-btn {
+        background-color: var(--action-color);
+        color: var(--bg-color);
+        border-color: var(--bg-color);
+    }
+}
+
+.alert.message-alert {
+    background-color: #f59f0b74;
+    border-color: var(--action-color);
+    color: var(--action-color);
+}
+
 footer {
     background-color: var(--surface-color);
     color: var(--primary-color);

@@ -47,10 +47,10 @@ export default function MoviePage() {
                 </div>
             </section>
 
-            <section>
+            <section className="py-5">
                 <div className="container">
                     <h1>Submit your review</h1>
-                    <ReviewForm movieId={movieId} getMovieInfo={getMovieInfo} url={url} />
+                    <ReviewForm movieId={movieId} getMovieInfo={getMovieInfo} url={url} setMovieInfo={setMovieInfo} />
                 </div>
             </section>
 
